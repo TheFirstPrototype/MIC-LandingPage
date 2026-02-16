@@ -64,8 +64,7 @@ const KnowBeforeYouGo: React.FC = () => {
               <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-[#C6DA31]">
                 <h4 className="text-xl font-bold text-[#112E4A] mb-2">Lunch</h4>
                 <p className="text-gray-600">
-                  A catered buffet lunch is included with your registration and will be served at 12:00 PM.
-                  Please notify us of any dietary restrictions during registration.
+                  A catered buffet lunch is available on-site for an additional fee at 12:00 PM.                  
                 </p>
               </div>
             </div>

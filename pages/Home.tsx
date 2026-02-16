@@ -12,12 +12,12 @@ const HeroCarousel = () => {
       subtitle: 'Join Michigan\'s premier event for invention and creativity.'
     },
     {
-      url: 'https://picsum.photos/id/1/1920/1080',
+      url: 'https://thefirstprototype.com/mic/pitch.jpg',
       title: 'Connecting Innovators',
       subtitle: 'Building a collaborative network for Michigan inventors.'
     },
     {
-      url: 'https://picsum.photos/id/180/1920/1080',
+      url: 'https://thefirstprototype.com/mic/paula.jpg',
       title: 'Empowering Ideas',
       subtitle: 'From concept to commercialization with expert guidance.'
     }

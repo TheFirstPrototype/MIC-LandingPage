@@ -16,11 +16,11 @@ const AttendExhibit: React.FC = () => {
 
   return (
     <div className="animate-in fade-in duration-700">
-      <div className="bg-[#FFCB05] py-24 text-[#00274C]">
+      <div className="bg-[#C6DA31] py-24 text-[#112E4A]">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6 uppercase tracking-tight">Attend | Exhibit</h1>
           <p className="text-2xl font-medium max-w-3xl mx-auto">
-            Connect with fellow inventors, entrepreneurs, service providers, and business support organizations 
+            Connect with fellow inventors, entrepreneurs, service providers, and business support organizations
             offering expertise in funding, legal, manufacturing, and commercialization.
           </p>
         </div>
@@ -29,10 +29,10 @@ const AttendExhibit: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
-            
-            <div className="bg-[#00274C] p-12 rounded-3xl text-white shadow-2xl flex flex-col justify-between transform hover:scale-[1.02] transition-transform">
+
+            <div className="bg-[#112E4A] p-12 rounded-3xl text-white shadow-2xl flex flex-col justify-between transform hover:scale-[1.02] transition-transform">
               <div>
-                <Ticket className="text-[#FFCB05] mb-6" size={56} />
+                <Ticket className="text-[#C6DA31] mb-6" size={56} />
                 <h2 className="text-4xl font-bold mb-6">Attend as a Visitor</h2>
                 <ul className="space-y-4 mb-10 text-lg opacity-90">
                   <li className="flex items-start gap-2">✓ Access to all keynote sessions</li>
@@ -41,20 +41,20 @@ const AttendExhibit: React.FC = () => {
                   <li className="flex items-start gap-2">✓ Watch the Pitch Competition live</li>
                 </ul>
               </div>
-              <a 
-                href="https://www.eventbrite.com" 
-                target="_blank" 
+              <a
+                href="https://www.eventbrite.com"
+                target="_blank"
                 rel="noreferrer"
-                className="bg-[#FFCB05] text-[#00274C] py-5 rounded-xl font-bold text-center text-xl flex items-center justify-center gap-2"
+                className="bg-[#C6DA31] text-[#112E4A] py-5 rounded-xl font-bold text-center text-xl flex items-center justify-center gap-2"
               >
                 Register to Attend <ArrowUpRight size={20} />
               </a>
             </div>
 
-            <div className="bg-gray-100 p-12 rounded-3xl border-2 border-[#00274C] flex flex-col justify-between transform hover:scale-[1.02] transition-transform">
+            <div className="bg-gray-100 p-12 rounded-3xl border-2 border-[#112E4A] flex flex-col justify-between transform hover:scale-[1.02] transition-transform">
               <div>
-                <Layout className="text-[#00274C] mb-6" size={56} />
-                <h2 className="text-4xl font-bold text-[#00274C] mb-6">Exhibit Your Invention</h2>
+                <Layout className="text-[#112E4A] mb-6" size={56} />
+                <h2 className="text-4xl font-bold text-[#112E4A] mb-6">Exhibit Your Invention</h2>
                 <ul className="space-y-4 mb-10 text-lg text-gray-700">
                   <li className="flex items-start gap-2">✓ Dedicated booth space for the day</li>
                   <li className="flex items-start gap-2">✓ Exposure to potential investors</li>
@@ -62,11 +62,11 @@ const AttendExhibit: React.FC = () => {
                   <li className="flex items-start gap-2">✓ Feature in the Summit Program</li>
                 </ul>
               </div>
-              <a 
-                href="https://www.eventbrite.com" 
-                target="_blank" 
+              <a
+                href="https://www.eventbrite.com"
+                target="_blank"
                 rel="noreferrer"
-                className="bg-[#00274C] text-[#FFCB05] py-5 rounded-xl font-bold text-center text-xl flex items-center justify-center gap-2"
+                className="bg-[#112E4A] text-[#C6DA31] py-5 rounded-xl font-bold text-center text-xl flex items-center justify-center gap-2"
               >
                 Register as Exhibitor <ArrowUpRight size={20} />
               </a>
@@ -75,13 +75,13 @@ const AttendExhibit: React.FC = () => {
           </div>
 
           <div className="mt-24">
-            <h2 className="text-3xl font-bold text-center text-[#00274C] mb-12">Hear From Our Community</h2>
+            <h2 className="text-3xl font-bold text-center text-[#112E4A] mb-12">Hear From Our Community</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {testimonials.map((t, idx) => (
                 <div key={idx} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 italic relative">
-                  <Quote className="absolute -top-4 -left-4 text-[#FFCB05]" size={40} />
+                  <Quote className="absolute -top-4 -left-4 text-[#C6DA31]" size={40} />
                   <p className="text-xl text-gray-600 mb-6 leading-relaxed">"{t.text}"</p>
-                  <p className="font-bold text-[#00274C] not-italic">— {t.author}</p>
+                  <p className="font-bold text-[#112E4A] not-italic">— {t.author}</p>
                 </div>
               ))}
             </div>

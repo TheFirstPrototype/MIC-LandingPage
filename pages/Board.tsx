@@ -13,8 +13,8 @@ const Board: React.FC = () => {
 
   return (
     <div className="animate-in fade-in duration-700">
-      <div className="bg-[#00274C] py-20 text-center">
-        <h1 className="text-5xl font-bold text-[#FFCB05] mb-4">Board of Directors</h1>
+      <div className="bg-[#112E4A] py-20 text-center">
+        <h1 className="text-5xl font-bold text-[#C6DA31] mb-4">Board of Directors</h1>
         <p className="text-white opacity-80 max-w-2xl mx-auto">The dedicated leaders driving MIC's mission forward.</p>
       </div>
 
@@ -22,24 +22,24 @@ const Board: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {directors.map((director, idx) => (
-              <div key={idx} className="bg-gray-50 p-10 rounded-3xl text-center group hover:bg-[#FFCB05] transition-all duration-500">
-                <div className="w-24 h-24 bg-[#00274C] rounded-full mx-auto mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+              <div key={idx} className="bg-gray-50 p-10 rounded-3xl text-center group hover:bg-[#C6DA31] transition-all duration-500">
+                <div className="w-24 h-24 bg-[#112E4A] rounded-full mx-auto mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                   <User size={48} />
                 </div>
-                <h3 className="text-2xl font-bold text-[#00274C] mb-2">{director.name}</h3>
-                <p className="text-gray-500 group-hover:text-[#00274C] font-medium">{director.role}</p>
+                <h3 className="text-2xl font-bold text-[#112E4A] mb-2">{director.name}</h3>
+                <p className="text-gray-500 group-hover:text-[#112E4A] font-medium">{director.role}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-[#FFCB05]/10">
+      <section className="py-20 bg-[#C6DA31]/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#00274C] mb-6">A Legacy of Innovation</h2>
+          <h2 className="text-3xl font-bold text-[#112E4A] mb-6">A Legacy of Innovation</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Since 2011, our board has been composed of professionals who understand the unique 
-            challenges faced by Michigan inventors. Together, they volunteer their expertise to 
+            Since 2011, our board has been composed of professionals who understand the unique
+            challenges faced by Michigan inventors. Together, they volunteer their expertise to
             build a more robust, connected, and supportive state economy.
           </p>
         </div>

@@ -44,7 +44,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#16443A] text-white sticky top-0 z-50 shadow-lg border-b border-[#FFCB05]/30">
+    <nav className="bg-[#00274C] text-white sticky top-0 z-50 shadow-lg border-b border-[#FFCB05]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24 items-center">
           <Link to="/" className="flex-shrink-0 flex items-center gap-4 group">
@@ -67,12 +67,12 @@ const Navbar = () => {
                   >
                     <span>{link.name}</span>
                     <ChevronDown size={16} />
-                    <div className={`absolute top-full left-0 w-64 bg-[#16443A] border border-[#FFCB05]/20 rounded-b-lg shadow-xl py-2 overflow-hidden transition-all duration-300 ${dropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`} onMouseLeave={() => setDropdownOpen(false)}>
+                    <div className={`absolute top-full left-0 w-64 bg-[#00274C] border border-[#FFCB05]/20 rounded-b-lg shadow-xl py-2 overflow-hidden transition-all duration-300 ${dropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`} onMouseLeave={() => setDropdownOpen(false)}>
                       {link.submenu.map((sub) => (
                         <Link
                           key={sub.name}
                           to={sub.path}
-                          className="block px-4 py-2 text-sm hover:bg-[#FFCB05] hover:text-[#16443A] transition-colors"
+                          className="block px-4 py-2 text-sm hover:bg-[#FFCB05] hover:text-[#00274C] transition-colors"
                         >
                           {sub.name}
                         </Link>
@@ -104,7 +104,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Nav */}
-      <div className={`md:hidden bg-[#16443A] transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-screen border-t border-[#FFCB05]/20' : 'max-h-0'}`}>
+      <div className={`md:hidden bg-[#00274C] transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-screen border-t border-[#FFCB05]/20' : 'max-h-0'}`}>
         <div className="px-4 pt-2 pb-6 space-y-1">
           {navLinks.map((link) => (
             <div key={link.name}>
@@ -141,7 +141,7 @@ const Navbar = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#16443A] text-white py-12">
+    <footer className="bg-[#00274C] text-white py-12">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <img src="https://thefirstprototype.com/mic/2.png" alt="MIC" className="h-16 w-auto brightness-200 mb-4" />

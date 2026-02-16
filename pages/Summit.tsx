@@ -51,7 +51,7 @@ const Summit: React.FC = () => {
 
   return (
     <div className="animate-in slide-in-from-bottom-4 duration-700">
-      <div className="bg-[#16443A] py-20 text-white text-center relative overflow-hidden">
+      <div className="bg-[#00274C] py-20 text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://thefirstprototype.com/mic/event.jpg')] bg-cover bg-center opacity-20" />
         <div className="relative z-10 max-w-5xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[#FFCB05]">2026 Inventors Summit</h1>
@@ -66,7 +66,7 @@ const Summit: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <div className="prose prose-lg max-w-none text-gray-700 mb-16">
-            <p className="text-xl font-semibold text-[#16443A] mb-4">Hosted by: The Michigan Inventors Coalition</p>
+            <p className="text-xl font-semibold text-[#00274C] mb-4">Hosted by: The Michigan Inventors Coalition</p>
             <p className="bg-[#FFCB05]/10 border-l-4 border-[#FFCB05] p-6 rounded-r-xl italic">
               Supported in part by: a Michigan State University Regional Economic Innovation grant, 
               the Michigan Inventors Coalition Expo captures innovation in motion, creating space for ideas 
@@ -80,16 +80,16 @@ const Summit: React.FC = () => {
             </p>
           </div>
 
-          <h2 className="text-4xl font-bold text-[#16443A] mb-10 text-center">What to Expect</h2>
+          <h2 className="text-4xl font-bold text-[#00274C] mb-10 text-center">What to Expect</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {expectations.map((item, idx) => {
               const IconComp = item.icon;
               return (
                 <div key={idx} className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all group">
-                  <IconComp className="text-[#16443A] mb-4 group-hover:scale-110 transition-transform" size={40} />
-                  <h3 className="text-xl font-bold mb-3 text-[#16443A]">{item.title}</h3>
+                  <IconComp className="text-[#00274C] mb-4 group-hover:scale-110 transition-transform" size={40} />
+                  <h3 className="text-xl font-bold mb-3 text-[#00274C]">{item.title}</h3>
                   <p className="text-gray-600 mb-6">{item.desc}</p>
-                  <Link to={item.link} className="text-[#16443A] font-bold inline-flex items-center gap-2 hover:translate-x-1 transition-transform">
+                  <Link to={item.link} className="text-[#00274C] font-bold inline-flex items-center gap-2 hover:translate-x-1 transition-transform">
                     Learn more <ArrowRight size={16} />
                   </Link>
                 </div>
@@ -97,7 +97,7 @@ const Summit: React.FC = () => {
             })}
           </div>
 
-          <div className="mt-20 text-center bg-[#16443A] p-12 rounded-3xl text-white">
+          <div className="mt-20 text-center bg-[#00274C] p-12 rounded-3xl text-white">
             <p className="text-xl mb-8 leading-relaxed">
               Whether you’re an aspiring inventor, a startup founder, an experienced business owner, 
               or a professional supporting innovation, the Michigan Inventors Coalition Expo is where 

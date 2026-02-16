@@ -5,7 +5,7 @@ import { Mic2, Users, GlassWater, Clock, Star } from 'lucide-react';
 const Programming: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-700">
-      <div className="bg-[#16443A] py-20 text-white relative">
+      <div className="bg-[#00274C] py-20 text-white relative">
         <div className="max-w-5xl mx-auto px-4">
           <h1 className="text-5xl font-bold mb-6 text-[#FFCB05]">Programming</h1>
           <p className="text-2xl opacity-90 leading-relaxed max-w-3xl">
@@ -20,9 +20,9 @@ const Programming: React.FC = () => {
           <div>
             <div className="flex items-center gap-4 mb-10">
               <div className="bg-[#FFCB05] p-3 rounded-xl">
-                <Mic2 className="text-[#16443A]" size={28} />
+                <Mic2 className="text-[#00274C]" size={28} />
               </div>
-              <h2 className="text-3xl font-bold text-[#16443A]">Speaker List</h2>
+              <h2 className="text-3xl font-bold text-[#00274C]">Speaker List</h2>
             </div>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               We invite the best speakers from all over the country to share their journey, from 
@@ -31,7 +31,7 @@ const Programming: React.FC = () => {
             </p>
             <div className="bg-gray-100 p-16 rounded-3xl text-center border-4 border-dashed border-gray-200">
               <Star className="mx-auto text-[#FFCB05] mb-4 animate-pulse" size={48} />
-              <h3 className="text-4xl font-bold text-[#16443A] mb-4">Coming Soon!</h3>
+              <h3 className="text-4xl font-bold text-[#00274C] mb-4">Coming Soon!</h3>
               <p className="text-lg text-gray-500">Our stellar 2026 speaker lineup is currently being finalized.</p>
             </div>
           </div>
@@ -39,17 +39,17 @@ const Programming: React.FC = () => {
           <div>
             <div className="flex items-center gap-4 mb-10">
               <div className="bg-[#FFCB05] p-3 rounded-xl">
-                <Users className="text-[#16443A]" size={28} />
+                <Users className="text-[#00274C]" size={28} />
               </div>
-              <h2 className="text-3xl font-bold text-[#16443A]">Breakout Sessions</h2>
+              <h2 className="text-3xl font-bold text-[#00274C]">Breakout Sessions</h2>
             </div>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               Dive deep into specific topics like patent filing, prototype manufacturing, digital marketing 
               for innovators, and venture capital readiness. These intimate sessions allow for direct Q&A 
               with experts.
             </p>
-            <div className="bg-[#16443A]/5 p-12 rounded-3xl text-center border border-[#16443A]/10">
-              <h3 className="text-2xl font-bold text-[#16443A] mb-4 uppercase tracking-widest">Enrollment Opens Soon</h3>
+            <div className="bg-[#00274C]/5 p-12 rounded-3xl text-center border border-[#00274C]/10">
+              <h3 className="text-2xl font-bold text-[#00274C] mb-4 uppercase tracking-widest">Enrollment Opens Soon</h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Sign-up for breakout sessions will be added to the Eventbrite attendee registration portal 
                 in Spring 2026. Stay tuned for the full curriculum!
@@ -57,11 +57,11 @@ const Programming: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-[#16443A] p-12 rounded-3xl text-white relative overflow-hidden">
+          <div className="bg-[#00274C] p-12 rounded-3xl text-white relative overflow-hidden">
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/3">
                 <div className="bg-[#FFCB05] w-24 h-24 rounded-full flex items-center justify-center mx-auto md:mx-0">
-                  <GlassWater className="text-[#16443A]" size={48} />
+                  <GlassWater className="text-[#00274C]" size={48} />
                 </div>
               </div>
               <div className="md:w-2/3 text-center md:text-left">

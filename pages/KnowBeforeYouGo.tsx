@@ -5,7 +5,7 @@ import { Map, Bed, Coffee, Info } from 'lucide-react';
 const KnowBeforeYouGo: React.FC = () => {
   return (
     <div className="animate-in fade-in duration-700">
-      <div className="bg-[#FFCB05] py-20 text-[#16443A]">
+      <div className="bg-[#FFCB05] py-20 text-[#00274C]">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">Know Before You Go</h1>
           <p className="text-xl opacity-80 uppercase tracking-widest font-bold">2026 Inventors Summit Essentials</p>
@@ -18,8 +18,8 @@ const KnowBeforeYouGo: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Map className="text-[#16443A]" size={32} />
-                <h2 className="text-3xl font-bold text-[#16443A]">Map and Parking</h2>
+                <Map className="text-[#00274C]" size={32} />
+                <h2 className="text-3xl font-bold text-[#00274C]">Map and Parking</h2>
               </div>
               <p className="text-gray-600 mb-6 text-lg">
                 The Kellogg Center is located at 219 S Harrison Rd, East Lansing, MI 48824. 
@@ -32,10 +32,10 @@ const KnowBeforeYouGo: React.FC = () => {
 
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <Bed className="text-[#16443A]" size={32} />
-                <h2 className="text-3xl font-bold text-[#16443A]">Accommodations</h2>
+                <Bed className="text-[#00274C]" size={32} />
+                <h2 className="text-3xl font-bold text-[#00274C]">Accommodations</h2>
               </div>
-              <div className="bg-[#16443A] text-white p-8 rounded-2xl shadow-xl">
+              <div className="bg-[#00274C] text-white p-8 rounded-2xl shadow-xl">
                 <h3 className="text-2xl font-bold mb-4 text-[#FFCB05]">Kellogg Hotel Information</h3>
                 <p className="mb-6 opacity-90">
                   Stay where the action is! We have secured a block of rooms at the Kellogg Hotel and Conference Center.
@@ -50,19 +50,19 @@ const KnowBeforeYouGo: React.FC = () => {
 
           <div className="bg-gray-50 p-12 rounded-3xl border border-gray-200">
             <div className="flex items-center gap-3 mb-8">
-              <Coffee className="text-[#16443A]" size={32} />
-              <h2 className="text-3xl font-bold text-[#16443A]">Dining Details</h2>
+              <Coffee className="text-[#00274C]" size={32} />
+              <h2 className="text-3xl font-bold text-[#00274C]">Dining Details</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-[#FFCB05]">
-                <h4 className="text-xl font-bold text-[#16443A] mb-2">Breakfast</h4>
+                <h4 className="text-xl font-bold text-[#00274C] mb-2">Breakfast</h4>
                 <p className="text-gray-600">
                   Continental breakfast will be served starting at 8:30 AM in the main registration area. 
                   Enjoy fresh coffee, pastries, and fruit before the opening keynote.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-[#FFCB05]">
-                <h4 className="text-xl font-bold text-[#16443A] mb-2">Lunch</h4>
+                <h4 className="text-xl font-bold text-[#00274C] mb-2">Lunch</h4>
                 <p className="text-gray-600">
                   A catered buffet lunch is included with your registration and will be served at 12:00 PM. 
                   Please notify us of any dietary restrictions during registration.
@@ -72,7 +72,7 @@ const KnowBeforeYouGo: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 text-[#16443A] font-bold text-lg border-b-2 border-[#FFCB05] pb-1">
+            <div className="inline-flex items-center gap-2 text-[#00274C] font-bold text-lg border-b-2 border-[#FFCB05] pb-1">
               <Info size={20} /> Need help? Visit our registration desk upon arrival.
             </div>
           </div>

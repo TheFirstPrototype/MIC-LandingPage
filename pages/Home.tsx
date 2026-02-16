@@ -48,7 +48,7 @@ const HeroCarousel = () => {
             </p>
             <Link
               to="/summit"
-              className="bg-[#FFCB05] text-[#00274C] px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2"
+              className="bg-[#FFCB05] text-[#16443A] px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2"
             >
               Explore the Summit <ArrowRight size={20} />
             </Link>
@@ -70,10 +70,10 @@ const HeroCarousel = () => {
 
 const FeatureCard = ({ icon: Icon, title, description }: { icon: any, title: string, description: string }) => (
   <div className="p-8 bg-white rounded-2xl shadow-xl border-t-4 border-[#FFCB05] hover:-translate-y-2 transition-transform duration-300">
-    <div className="bg-[#00274C]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-      <Icon className="text-[#00274C]" size={32} />
+    <div className="bg-[#16443A]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+      <Icon className="text-[#16443A]" size={32} />
     </div>
-    <h3 className="text-2xl font-bold text-[#00274C] mb-4">{title}</h3>
+    <h3 className="text-2xl font-bold text-[#16443A] mb-4">{title}</h3>
     <p className="text-gray-600 leading-relaxed">{description}</p>
   </div>
 );
@@ -85,8 +85,8 @@ const Home: React.FC = () => {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#00274C] mb-8">
-            Welcome to the <span className="text-[#00274C]">Michigan Inventors Coalition</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#16443A] mb-8">
+            Welcome to the <span className="text-[#16443A]">Michigan Inventors Coalition</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
             Where ingenuity meets opportunity. We are the heartbeat of Michigan’s innovation ecosystem, 
@@ -113,7 +113,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#00274C] text-white">
+      <section className="py-20 bg-[#16443A] text-white">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
             <h2 className="text-4xl font-bold mb-6 text-[#FFCB05]">About Our Mission</h2>
@@ -143,9 +143,9 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="bg-white p-12 rounded-3xl shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-10">
-              <Users size={120} className="text-[#00274C]" />
+              <Users size={120} className="text-[#16443A]" />
             </div>
-            <h2 className="text-4xl font-bold text-[#00274C] mb-6">Want to get Involved?</h2>
+            <h2 className="text-4xl font-bold text-[#16443A] mb-6">Want to get Involved?</h2>
             <p className="text-lg text-gray-600 mb-8">
               The Michigan Inventors Coalition is powered by passionate individuals. We offer numerous 
               volunteer opportunities throughout the year, from event organization to mentoring. 
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
             </p>
             <Link
               to="/contact-us"
-              className="inline-block bg-[#00274C] text-[#FFCB05] px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg"
+              className="inline-block bg-[#16443A] text-[#FFCB05] px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all shadow-lg"
             >
               Become a Volunteer
             </Link>

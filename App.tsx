@@ -13,6 +13,7 @@ import PitchCompetition from './pages/PitchCompetition';
 import SponsorVolunteer from './pages/SponsorVolunteer';
 import Board from './pages/Board';
 import Contact from './pages/Contact';
+import ScrollToTop from './src/components/ScrollToTop';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,9 +48,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24 items-center">
           <Link to="/" className="flex-shrink-0 flex items-center gap-4 group">
-            <img 
-              src="https://thefirstprototype.com/mic/2.png" 
-              alt="MIC Logo" 
+            <img
+              src="https://thefirstprototype.com/mic/2.png"
+              alt="MIC Logo"
               className="h-20 w-auto brightness-200 transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
@@ -59,7 +60,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
                 {link.submenu ? (
-                  <div 
+                  <div
                     className="flex items-center gap-1 cursor-pointer py-2 hover:text-[#FFCB05] transition-colors"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                     onMouseEnter={() => setDropdownOpen(true)}
@@ -176,6 +177,7 @@ const App: React.FC = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/summit" element={<Summit />} />

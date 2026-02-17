@@ -5,12 +5,12 @@ import { Ticket, Layout, Quote, ArrowUpRight } from 'lucide-react';
 const AttendExhibit: React.FC = () => {
   const testimonials = [
     {
-      text: "The MIC Summit was the catalyst I needed to move from a backyard prototype to my first 1,000 units sold. The networking alone is worth the trip.",
-      author: "Sarah J., Michigan Inventor"
+      text: "The MIC Summit is where creativity meets connection, it's a chance for inventors to learn from experts, build meaningful relationships, and fast-track their ideas into real-world success",
+      author: "Paula Badalamente | Founder | Imagio Glass Design"
     },
     {
-      text: "As a patent attorney, I find this event to be the highest concentration of creativity in the Midwest. It's where the future happens.",
-      author: "Marcus T., IP Expert"
+      text: "As a founder, the Summit is a must-attend for inventors, helping innovators grow their ideas, connect with peers, and discover the tools they need to bring products to market",
+      author: "Renee Henderson | Founder | Scent Sactuary"
     }
   ];
 

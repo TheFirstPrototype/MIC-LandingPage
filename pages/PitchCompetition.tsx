@@ -45,7 +45,7 @@ const PitchCompetition: React.FC = () => {
                   href="#"
                   className="inline-flex items-center gap-2 bg-[#112E4A] text-[#C6DA31] px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform"
                 >
-                  Apply Now via Velocity <Send size={20} />
+                  Coming Soon <Send size={20} />
                 </a>
               </div>
               <div className="md:w-1/3">

@@ -42,7 +42,7 @@ const AttendExhibit: React.FC = () => {
                 </ul>
               </div>
               <a
-                href="https://www.eventbrite.com"
+                href="https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#C6DA31] text-[#112E4A] py-5 rounded-xl font-bold text-center text-xl flex items-center justify-center gap-2"
@@ -63,7 +63,7 @@ const AttendExhibit: React.FC = () => {
                 </ul>
               </div>
               <a
-                href="https://www.eventbrite.com"
+                href="https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#112E4A] text-[#C6DA31] py-5 rounded-xl font-bold text-center text-xl flex items-center justify-center gap-2"

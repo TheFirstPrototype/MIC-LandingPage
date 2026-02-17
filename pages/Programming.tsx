@@ -71,7 +71,11 @@ const Programming: React.FC = () => {
                   enjoy light refreshments, and solidify the connections made throughout the Summit.
                 </p>
                 <div className="inline-flex items-center gap-2 text-sm uppercase tracking-widest bg-white/10 px-4 py-2 rounded-full">
-                  <Clock size={16} /> After-Summit Event | Register via Eventbrite
+                  <Clock size={16} /> After-Summit Event |
+                  <a className="{py-2 hover:text-[#C6DA31] transition-colors ${location.pathname === link.path ? 'text-[#C6DA31] border-b-2 border-[#C6DA31]' : ''}"
+                    href="https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator">
+                    Register via Eventbrite
+                  </a>
                 </div>
               </div>
             </div>

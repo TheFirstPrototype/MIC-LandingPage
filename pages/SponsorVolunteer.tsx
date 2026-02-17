@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { DollarSign, Check, HandHeart, CalendarCheck } from 'lucide-react';
+import { Link } from 'react-router';
 
 // Fix: Use React.FC to handle React-specific props like 'key' and provide proper typing for the component
 const SponsorCard: React.FC<{ tier: string; price: string; features: string[]; available: string }> = ({ tier, price, features, available }) => (
@@ -102,6 +103,7 @@ const SponsorVolunteer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {/* Fix: Passed props explicitly to ensure key is handled correctly by JSX transform */}
             {sponsorships.map((s, idx) => (
+              <a href="https://startupspace.app/v2/dynamic-survey/view/305/10597" target="_blank" rel="noopener noreferrer">
               <SponsorCard
                 key={idx}
                 tier={s.tier}
@@ -109,6 +111,7 @@ const SponsorVolunteer: React.FC = () => {
                 features={s.features}
                 available={s.available}
               />
+              </a>
             ))}
           </div>
 
@@ -127,9 +130,11 @@ const SponsorVolunteer: React.FC = () => {
                 donating 2-3 hours of your time at the event to help us make it a great day.
               </p>
               <div className="space-y-4">
-                <button className="bg-[#112E4A] text-[#C6DA31] px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all flex items-center gap-2">
-                  Volunteer Sign-up <HandHeart size={20} />
-                </button>
+                <a href="https://startupspace.app/v2/dynamic-survey/view/305/10597" target="_blank" rel="noopener noreferrer">
+                  <button className="bg-[#112E4A] text-[#C6DA31] px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all flex items-center gap-2">                  
+                    Volunteer Sign-up <HandHeart size={20} />                
+                  </button>
+                </a>
                 <p className="text-sm text-gray-400 italic">Chair: Katie Nida | Volunteer signup hosted by Velocity</p>
               </div>
             </div>

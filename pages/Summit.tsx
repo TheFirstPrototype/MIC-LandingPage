@@ -51,6 +51,42 @@ const Summit: React.FC = () => {
 
   return (
     <div className="animate-in slide-in-from-bottom-4 duration-700">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(
+                                  {
+                                    "@context": "https://schema.org",
+                                    "@type": "Event",
+                                    "name": "Michigan Inventors Coalition Expo 2026",
+                                    "startDate": "2026-07-09T08:00:00-04:00",
+                                    "endDate": "2026-07-09T17:00:00-04:00",
+                                    "eventStatus": "https://schema.org/EventScheduled",
+                                    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                                    "location": {
+                                      "@type": "Place",
+                                      "name": "Kellogg Hotel & Conference Center",
+                                      "address": {
+                                        "@type": "PostalAddress",
+                                        "streetAddress": "219 S Harrison Rd",
+                                        "addressLocality": "East Lansing",
+                                        "addressRegion": "MI",
+                                        "postalCode": "48824",
+                                        "addressCountry": "US"
+                                      }
+                                    },
+                                    "image": [
+                                      "https://thefirstprototype.com/mic/2.png"
+                                    ],
+                                    "description": "The annual Michigan Inventors Coalition Expo brings together inventors, entrepreneurs, and resources from across the state for networking, education, and a pitch competition.",
+                                    "organizer": {
+                                      "@type": "Organization",
+                                      "name": "Michigan Inventors Coalition",
+                                      "url": "https://www.miinventors.org/"
+                                    }
+                                  }
+                                ) 
+                                }}
+      />      
       <div className="bg-[#112E4A] py-20 text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://thefirstprototype.com/mic/event.jpg')] bg-cover bg-center opacity-20" />
         <div className="relative z-10 max-w-5xl mx-auto px-4">

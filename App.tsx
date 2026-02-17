@@ -146,7 +146,7 @@ const Footer = () => {
         <div>
           <img src="https://thefirstprototype.com/mic/2.png" alt="MIC" className="h-16 w-auto brightness-200 mb-4" />
           <p className="text-gray-300 text-sm">
-            Supporting Michigan’s early-stage inventors and innovators as they move ideas toward commercialization since 2011.
+            Supporting Michigan's early-stage inventors and innovators as they move ideas toward commercialization since 2011.
           </p>
         </div>
         <div>

@@ -25,7 +25,7 @@ const Home: React.FC = () => {
             Welcome to the <span className="text-[#112E4A]">Michigan Inventors Coalition</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Where ingenuity meets opportunity. We are the heartbeat of Michigan’s innovation ecosystem,
+            Where ingenuity meets opportunity. We are the heartbeat of Michigan's innovation ecosystem,
             providing a platform where bold ideas take flight. Whether you're sketching your first prototype
             or scaling a startup, MIC is your partner in turning vision into reality.
           </p>
@@ -55,13 +55,13 @@ const Home: React.FC = () => {
             <h2 className="text-4xl font-bold mb-6 text-[#C6DA31]">About Our Mission</h2>
             <div className="space-y-4 text-lg text-gray-200 leading-relaxed">
               <p>
-                The Michigan Inventors Coalition (MIC) is a statewide 501(c)(3) nonprofit dedicated to supporting Michigan’s early-stage inventors and innovators as they move ideas toward commercialization.
+                The Michigan Inventors Coalition (MIC) is a statewide 501(c)(3) nonprofit dedicated to supporting Michigan's early-stage inventors and innovators as they move ideas toward commercialization.
               </p>
               <p>
                 Founded in 2011, MIC connects inventors to critical resources through education, mentorship, and a collaborative network of local, statewide, and federal partners.
               </p>
               <p>
-                In partnership with Michigan State University and the EDA University Center, MIC hosts its annual Inventors Expo and year-round opportunities that bring together innovators, service providers, and industry experts—strengthening Michigan’s innovation ecosystem.
+                In partnership with Michigan State University and the EDA University Center, MIC hosts its annual Inventors Expo and year-round opportunities that bring together innovators, service providers, and industry experts—strengthening Michigan's innovation ecosystem.
               </p>
             </div>
           </div>

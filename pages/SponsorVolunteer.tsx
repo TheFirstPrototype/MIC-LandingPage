@@ -126,7 +126,7 @@ const SponsorVolunteer: React.FC = () => {
               </div>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Michigan Inventors Coalition is seeking volunteers to make the 2026 Inventors Summit a success!
-                It takes a village to put on an event of this size and we can’t do it alone. Please consider
+                It takes a village to put on an event of this size and we can't do it alone. Please consider
                 donating 2-3 hours of your time at the event to help us make it a great day.
               </p>
               <div className="space-y-4">

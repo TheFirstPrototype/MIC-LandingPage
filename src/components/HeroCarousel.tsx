@@ -7,12 +7,12 @@ const HeroCarousel = () => {
     const images = [
         {
             url: 'https://thefirstprototype.com/mic/pitch.jpg',
-            title: '2026 Innovator\'s Summit',
+            title: '2026 Inventor\'s Summit',
             subtitle: 'Join Michigan\'s premier event for invention and creativity.'
         },
         {
             url: 'https://thefirstprototype.com/mic/event.jpg',
-            title: 'Connecting Innovators',
+            title: 'Connecting Inventors',
             subtitle: 'Building a collaborative network for Michigan inventors.'
         },
         {

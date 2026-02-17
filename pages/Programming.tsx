@@ -45,7 +45,7 @@ const Programming: React.FC = () => {
             </div>
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
               Dive deep into specific topics like patent filing, prototype manufacturing, digital marketing
-              for innovators, and venture capital readiness. These intimate sessions allow for direct Q&A
+              for inventors, and venture capital readiness. These intimate sessions allow for direct Q&A
               with experts.
             </p>
             <div className="bg-[#112E4A]/5 p-12 rounded-3xl text-center border border-[#112E4A]/10">

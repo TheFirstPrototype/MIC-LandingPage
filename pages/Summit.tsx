@@ -73,7 +73,7 @@ const Summit: React.FC = () => {
               to grow, connect, and take root in support of economic development across Michigan.
             </p>
             <p className="mt-8">
-              Join innovators, entrepreneurs, and industry leaders for the 14th year of Michigan’s premier event
+              Join inventors, entrepreneurs, and industry leaders for the 14th year of Michigan's premier event
               celebrating invention, creativity, and commercialization. The Michigan Inventors Coalition Expo
               brings together early-stage inventors, startups, and support organizations for a full day of
               learning, connection, and opportunity.
@@ -99,11 +99,11 @@ const Summit: React.FC = () => {
 
           <div className="mt-20 text-center bg-[#112E4A] p-12 rounded-3xl text-white">
             <p className="text-xl mb-8 leading-relaxed">
-              Whether you’re an aspiring inventor, a startup founder, an experienced business owner,
+              Whether you're an aspiring inventor, a startup founder, an experienced business owner,
               or a professional supporting innovation, the Michigan Inventors Coalition Expo is where
               ideas gain momentum and connections turn into opportunities.
             </p>
-            <p className="text-2xl font-bold text-[#C6DA31]">Mark your calendar and be part of Michigan’s innovation community.</p>
+            <p className="text-2xl font-bold text-[#C6DA31]">Mark your calendar and be part of Michigan's innovation community.</p>
           </div>
         </div>
       </section>

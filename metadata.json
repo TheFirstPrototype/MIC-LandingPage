@@ -1,7 +1,7 @@
 
 {
-  "name": "Michigan Innovator’s Coalition",
-  "description": "The official website for the Michigan Innovator’s Coalition (MIC), supporting early-stage inventors and innovators since 2011.",
+  "name": "Michigan Inventors Coalition | Resources, Expos & Networking",
+  "description": "The official website for the Michigan Inventors Coalition (MIC), supporting early-stage inventors and innovators since 2011.",
   "requestFramePermissions": [
     "geolocation"
   ]

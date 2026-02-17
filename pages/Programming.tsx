@@ -49,10 +49,9 @@ const Programming: React.FC = () => {
               with experts.
             </p>
             <div className="bg-[#112E4A]/5 p-12 rounded-3xl text-center border border-[#112E4A]/10">
-              <h3 className="text-2xl font-bold text-[#112E4A] mb-4 uppercase tracking-widest">Enrollment Opens Soon</h3>
+              <h3 className="text-2xl font-bold text-[#112E4A] mb-4 uppercase tracking-widest">Announcing Soon</h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Sign-up for breakout sessions will be added to the Eventbrite attendee registration portal
-                in Spring 2026. Stay tuned for the full curriculum!
+                All breakout sessions will be on a drop-in basis. Stay tuned for the full program!
               </p>
             </div>
           </div>

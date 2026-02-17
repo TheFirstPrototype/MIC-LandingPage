@@ -49,7 +49,7 @@ const Navbar = () => {
         <div className="flex justify-between h-24 items-center">
           <Link to="/" className="flex-shrink-0 flex items-center gap-4 group">
             <img
-              src="https://thefirstprototype.com/mic/2.png"
+              src="https://thefirstprototype.com/mic/4.png"
               alt="MIC Logo"
               className="h-20 w-auto brightness-200 transition-transform duration-300 group-hover:scale-105"
             />

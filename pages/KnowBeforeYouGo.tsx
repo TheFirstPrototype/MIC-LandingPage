@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Map, Bed, Coffee, Info } from 'lucide-react';
+import { Link } from 'react-router';
 
 const KnowBeforeYouGo: React.FC = () => {
   return (
@@ -25,9 +26,12 @@ const KnowBeforeYouGo: React.FC = () => {
                 The Kellogg Center is located at 219 S Harrison Rd, East Lansing, MI 48824.
                 Complimentary parking is available in the ramp adjacent to the hotel for all Summit attendees.
               </p>
-              <div className="bg-gray-100 p-4 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center h-64 text-gray-400 italic">
-                [Map visualization here - map.jpg]
+              <div className="bg-gray-100 p-4 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center h-128 text-gray-400 italic">
+                <Link to="https://www.google.com/maps/dir//Kellogg+Hotel+and+Conference+Center,+219+S+Harrison+Rd,+East+Lansing,+MI+48824/@42.7317061,-84.4957553,17z/data=!3m1!5s0x8822e9d87f20f723:0x7de08a94fb5ef11c!4m18!1m8!3m7!1s0x8822e9d8800e0571:0x68fc00062e9c6b53!2sKellogg+Hotel+and+Conference+Center,+219+S+Harrison+Rd,+East+Lansing,+MI+48824!3b1!8m2!3d42.7317061!4d-84.4931804!16s%2Fg%2F11rp6f64nb!4m8!1m0!1m5!1m1!1s0x8822e9d8800e0571:0x68fc00062e9c6b53!2m2!1d-84.4931804!2d42.7317061!3e0">
+                  <img src="https://thefirstprototype.com/mic/kellogg.png" alt="Summit Map" className="w-full h-full object-cover rounded-lg" />
+                </Link>
               </div>
+              
             </div>
 
             <div>

@@ -1,8 +1,86 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: 'General Inquiry',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Invalid email address';
+    }
+    if (!formData.subject) newErrors.subject = 'Subject is required';
+    if (!formData.message.trim()) newErrors.message = 'Message is required';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuccess(false);
+
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(
+        'https://api.deafassistant.com/email/sendemail?body=Below is the message received on the website&subject=MIC Website Form&recipient=saamer.mansoor@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            body: formData.message,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        subject: 'General Inquiry',
+        message: '',
+      });
+      setErrors({});
+    } catch (error) {
+      console.error(error);
+      setErrors({ api: 'Something went wrong. Please try again later.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="animate-in fade-in duration-700">
       <div className="bg-[#112E4A] py-20 text-white text-center">
@@ -60,46 +138,81 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="bg-[#112E4A] p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-4 opacity-10">
-                <Send size={120} className="text-[#C6DA31]" />
-              </div>
-              <form className="relative z-10 space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
+
                 <div>
-                  <label className="block text-[#C6DA31] text-sm font-bold mb-2 uppercase tracking-wide">Name</label>
+                  <label className="block text-[#C6DA31] text-sm font-bold mb-2 uppercase tracking-wide">
+                    Name
+                  </label>
                   <input
-                    type="text"
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#C6DA31] transition-colors"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-5 py-4 text-white"
                     placeholder="Your full name"
                   />
+                  {errors.name && <p className="text-red-400 mt-2">{errors.name}</p>}
                 </div>
+
                 <div>
-                  <label className="block text-[#C6DA31] text-sm font-bold mb-2 uppercase tracking-wide">Email</label>
+                  <label className="block text-[#C6DA31] text-sm font-bold mb-2 uppercase tracking-wide">
+                    Email
+                  </label>
                   <input
+                    name="email"
                     type="email"
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#C6DA31] transition-colors"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-5 py-4 text-white"
                     placeholder="your@email.com"
                   />
+                  {errors.email && <p className="text-red-400 mt-2">{errors.email}</p>}
                 </div>
+
                 <div>
-                  <label className="block text-[#C6DA31] text-sm font-bold mb-2 uppercase tracking-wide">Subject</label>
-                  <select className="w-full bg-white/10 border border-white/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#C6DA31] transition-colors appearance-none">
+                  <label className="block text-[#C6DA31] text-sm font-bold mb-2 uppercase tracking-wide">
+                    Subject
+                  </label>
+                  <select
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-5 py-4 text-white"
+                  >
                     <option className="bg-[#112E4A]">General Inquiry</option>
                     <option className="bg-[#112E4A]">Summit Registration</option>
                     <option className="bg-[#112E4A]">Sponsorship</option>
                     <option className="bg-[#112E4A]">Volunteer Opportunities</option>
                     <option className="bg-[#112E4A]">Pitch Competition</option>
                   </select>
+                  {errors.subject && <p className="text-red-400 mt-2">{errors.subject}</p>}
                 </div>
+
                 <div>
-                  <label className="block text-[#C6DA31] text-sm font-bold mb-2 uppercase tracking-wide">Message</label>
+                  <label className="block text-[#C6DA31] text-sm font-bold mb-2 uppercase tracking-wide">
+                    Message
+                  </label>
                   <textarea
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-[#C6DA31] transition-colors h-40"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-5 py-4 text-white h-40"
                     placeholder="Tell us how we can help..."
-                  ></textarea>
+                  />
+                  {errors.message && <p className="text-red-400 mt-2">{errors.message}</p>}
                 </div>
-                <button className="w-full bg-[#C6DA31] text-[#112E4A] py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all shadow-xl flex items-center justify-center gap-2">
-                  Send Message <Send size={20} />
+
+                {errors.api && <p className="text-red-400">{errors.api}</p>}
+                {success && <p className="text-green-400 font-semibold">Message sent successfully!</p>}
+
+                <button
+                  disabled={isSubmitting}
+                  className="w-full bg-[#C6DA31] text-[#112E4A] py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 disabled:opacity-60"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  <Send size={20} />
                 </button>
+
               </form>
             </div>
 

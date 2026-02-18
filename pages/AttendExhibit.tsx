@@ -36,7 +36,7 @@ const AttendExhibit: React.FC = () => {
                 <h2 className="text-4xl font-bold mb-6">Attend as a Visitor</h2>
                 <ul className="space-y-4 mb-10 text-lg opacity-90">
                   <li className="flex items-start gap-2">✓ Access to all keynote sessions</li>
-                  <li className="flex items-start gap-2">✓ Breakfast & Lunch included</li>
+                  <li className="flex items-start gap-2">✓ Breakfast included</li>
                   <li className="flex items-start gap-2">✓ Networking with 100+ exhibitors</li>
                   <li className="flex items-start gap-2">✓ Watch the Pitch Competition live</li>
                 </ul>

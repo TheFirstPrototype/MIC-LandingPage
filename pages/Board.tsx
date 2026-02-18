@@ -4,11 +4,11 @@ import { User } from 'lucide-react';
 
 const Board: React.FC = () => {
   const directors = [
-    { name: "Joe Finkler", role: "Board Member" },
-    { name: "Dennis Shaver", role: "Board Member" },
-    { name: "Kevin Moran", role: "Board Member" },
-    { name: "Paula Macpherson", role: "2026 Inventors Summit Event Chair" },
-    { name: "John D. Hopkins", role: "Board Member" },
+    { name: "Joe Finkler", role: "Board Member", image: "https://thefirstprototype.com/mic/joe.png" },
+    { name: "Dennis Shaver", role: "Board Member", image: "https://thefirstprototype.com/mic/dennis.jpg" },
+    { name: "Kevin Moran", role: "Board Member", image: "https://thefirstprototype.com/mic/kevin.jpg" },
+    { name: "Paula Macpherson", role: "2026 Inventors Summit Event Chair", image: "https://thefirstprototype.com/mic/paula.jpg" },
+    { name: "John D. Hopkins", role: "Board Member", image: "https://thefirstprototype.com/mic/john.jpg" },
   ];
 
   return (
@@ -24,7 +24,7 @@ const Board: React.FC = () => {
             {directors.map((director, idx) => (
               <div key={idx} className="bg-gray-50 p-10 rounded-3xl text-center group hover:bg-[#C6DA31] transition-all duration-500">
                 <div className="w-24 h-24 bg-[#112E4A] rounded-full mx-auto mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
-                  <User size={48} />
+                  <img src={director.image} alt={director.name} className="w-full h-full object-cover rounded-full" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#112E4A] mb-2">{director.name}</h3>
                 <p className="text-gray-500 group-hover:text-[#112E4A] font-medium">{director.role}</p>

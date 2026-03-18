@@ -42,14 +42,17 @@ const PitchCompetition: React.FC = () => {
                   </ul>
                 </div>
                 <a
-                  href="#"
+                  href="https://startupspace.app/v2/dynamic-survey/view/305/10655"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-2 bg-[#112E4A] text-[#C6DA31] px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform"
                 >
-                  Coming Soon <Send size={20} />
+                  Apply Here <Send size={20} />
                 </a>
               </div>
               <div className="md:w-1/3">
                 <div className="bg-[#C6DA31] p-8 rounded-2xl text-center">
+                  <p className="text-[#112E4A] font-bold uppercase tracking-widest">Technical Assistance &</p>
                   <h3 className="text-4xl font-black text-[#112E4A] mb-2">$ CASH $</h3>
                   <p className="text-[#112E4A] font-bold uppercase tracking-widest">Prizes for Winners</p>
                 </div>

@@ -1,8 +1,15 @@
-
+import { useSearchParams } from 'react-router-dom';
 import React from 'react';
 import { Ticket, Layout, Quote, ArrowUpRight } from 'lucide-react';
+import { event } from 'firebase-functions/lib/providers/analytics';
 
 const AttendExhibit: React.FC = () => {
+  const [searchParams] = useSearchParams();
+  const utmSource = searchParams.get('utm_source');
+  const eventbriteUrl = utmSource
+    ? `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-attendexhibit-${utmSource}`
+    : `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-attendexhibit`;
+
   const testimonials = [
     {
       text: "The MIC Summit is where creativity meets connection, it's a chance for inventors to learn from experts, build meaningful relationships, and fast-track their ideas into real-world success",
@@ -42,7 +49,7 @@ const AttendExhibit: React.FC = () => {
                 </ul>
               </div>
               <a
-                href="https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator"
+                href={eventbriteUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#C6DA31] text-[#112E4A] py-5 rounded-xl font-bold text-center text-xl flex items-center justify-center gap-2"
@@ -63,7 +70,7 @@ const AttendExhibit: React.FC = () => {
                 </ul>
               </div>
               <a
-                href="https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator"
+                href={eventbriteUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="bg-[#112E4A] text-[#C6DA31] py-5 rounded-xl font-bold text-center text-xl flex items-center justify-center gap-2"

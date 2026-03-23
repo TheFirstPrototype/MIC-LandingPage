@@ -1,8 +1,14 @@
 
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Mic2, Users, GlassWater, Clock, Star } from 'lucide-react';
 
 const Programming: React.FC = () => {
+  const [searchParams] = useSearchParams();
+  const utmSource = searchParams.get('utm_source');
+  const eventbriteUrl = utmSource
+    ? `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-programming-${utmSource}`
+    : `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-programming`;
   return (
     <div className="animate-in fade-in duration-700">
       <div className="bg-[#112E4A] py-20 text-white relative">
@@ -72,7 +78,7 @@ const Programming: React.FC = () => {
                 <div className="inline-flex items-center gap-2 text-sm uppercase tracking-widest bg-white/10 px-4 py-2 rounded-full">
                   <Clock size={16} /> After-Summit Event |
                   <a className="{py-2 hover:text-[#C6DA31] transition-colors ${location.pathname === link.path ? 'text-[#C6DA31] border-b-2 border-[#C6DA31]' : ''}"
-                    href="https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator">
+                    href={eventbriteUrl}>
                     Register via Eventbrite
                   </a>
                 </div>

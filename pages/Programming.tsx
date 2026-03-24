@@ -1,14 +1,57 @@
-
-import React from 'react';
-import { useSearchParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { Mic2, Users, GlassWater, Clock, Star } from 'lucide-react';
 
 const Programming: React.FC = () => {
+  const location = useLocation();
   const [searchParams] = useSearchParams();
+  const userId = searchParams.get('id'); // Get the 'id' parameter from the URL
   const utmSource = searchParams.get('utm_source');
   const eventbriteUrl = utmSource
     ? `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-programming-${utmSource}`
     : `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-programming`;
+
+  // --- Function to send data to Apps Script ---
+  const trackEventbriteClick = async () => {
+    if (!userId) {
+      console.warn("UserId not found in URL. Cannot track Eventbrite click for conversion.");
+      return;
+    }
+
+    const appsScriptWebAppUrl = 'https://script.google.com/macros/s/AKfycby-udlmLJjEpHAEAfjQk_Qt0cK1Z99epQXsZnTkrBjGBgUr7FctjLDWU64hdk_7KmXxQQ/exec'; // <<< IMPORTANT: Paste your Apps Script Web App URL here!
+
+    try {
+      const response = await fetch(appsScriptWebAppUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: userId,
+          event: 'eventbrite_click',
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        console.log(`Eventbrite click tracked successfully for UserId: ${userId}`);
+      } else {
+        console.error(`Failed to track Eventbrite click for UserId: ${userId}`, data.error);
+      }
+    } catch (error) {
+      console.error('Error sending Eventbrite click data to Apps Script:', error);
+    }
+  };
+
+  // Optional: You can use useEffect to log the userId when the page loads
+  useEffect(() => {
+    if (userId) {
+      console.log('User landed with ID:', userId);
+      // You could also log this initial landing to a separate Apps Script doPost if needed,
+      // but the main focus here is the Eventbrite conversion.
+    }
+  }, [userId]);
+
   return (
     <div className="animate-in fade-in duration-700">
       <div className="bg-[#112E4A] py-20 text-white relative">
@@ -78,7 +121,7 @@ const Programming: React.FC = () => {
                 <div className="inline-flex items-center gap-2 text-sm uppercase tracking-widest bg-white/10 px-4 py-2 rounded-full">
                   <Clock size={16} /> After-Summit Event |
                   <a className="{py-2 hover:text-[#C6DA31] transition-colors ${location.pathname === link.path ? 'text-[#C6DA31] border-b-2 border-[#C6DA31]' : ''}"
-                    href={eventbriteUrl}>
+                    href={eventbriteUrl} onClick={trackEventbriteClick}>
                     Register via Eventbrite
                   </a>
                 </div>

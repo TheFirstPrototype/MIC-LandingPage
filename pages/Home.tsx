@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from '../src/components/LinkWithQuery';
 import { ArrowRight, Lightbulb, Users, Handshake } from 'lucide-react';
 import HeroCarousel from '@/src/components/HeroCarousel';
 

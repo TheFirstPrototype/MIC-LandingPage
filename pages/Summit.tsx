@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from '../src/components/LinkWithQuery';
 import { Calendar, MapPin, CheckCircle2, Award, Presentation, Users as UsersIcon, Megaphone, HeartHandshake } from 'lucide-react';
 
 const Summit: React.FC = () => {

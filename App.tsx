@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Link from './src/components/LinkWithQuery';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 // Import Pages

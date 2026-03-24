@@ -1,14 +1,57 @@
-import { useSearchParams } from 'react-router-dom';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { Ticket, Layout, Quote, ArrowUpRight } from 'lucide-react';
 import { event } from 'firebase-functions/lib/providers/analytics';
 
 const AttendExhibit: React.FC = () => {
+  const location = useLocation();
   const [searchParams] = useSearchParams();
+  const userId = searchParams.get('id'); // Get the 'id' parameter from the URL
   const utmSource = searchParams.get('utm_source');
   const eventbriteUrl = utmSource
-    ? `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-attendexhibit-${utmSource}`
-    : `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-attendexhibit`;
+    ? `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-programming-${utmSource}`
+    : `https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523?aff=oddtdtcreator&utm_source=web-programming`;
+
+  // --- Function to send data to Apps Script ---
+  const trackEventbriteClick = async () => {
+    if (!userId) {
+      console.warn("UserId not found in URL. Cannot track Eventbrite click for conversion.");
+      return;
+    }
+
+    const appsScriptWebAppUrl = 'https://script.google.com/macros/s/AKfycby-udlmLJjEpHAEAfjQk_Qt0cK1Z99epQXsZnTkrBjGBgUr7FctjLDWU64hdk_7KmXxQQ/exec'; // <<< IMPORTANT: Paste your Apps Script Web App URL here!
+
+    try {
+      const response = await fetch(appsScriptWebAppUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: userId,
+          event: 'eventbrite_click',
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        console.log(`Eventbrite click tracked successfully for UserId: ${userId}`);
+      } else {
+        console.error(`Failed to track Eventbrite click for UserId: ${userId}`, data.error);
+      }
+    } catch (error) {
+      console.error('Error sending Eventbrite click data to Apps Script:', error);
+    }
+  };
+
+  // Optional: You can use useEffect to log the userId when the page loads
+  useEffect(() => {
+    if (userId) {
+      console.log('User landed with ID:', userId);
+      // You could also log this initial landing to a separate Apps Script doPost if needed,
+      // but the main focus here is the Eventbrite conversion.
+    }
+  }, [userId]);
 
   const testimonials = [
     {

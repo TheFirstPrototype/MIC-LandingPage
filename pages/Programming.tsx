@@ -121,7 +121,7 @@ const Programming: React.FC = () => {
                 <div className="inline-flex items-center gap-2 text-sm uppercase tracking-widest bg-white/10 px-4 py-2 rounded-full">
                   <Clock size={16} /> After-Summit Event |
                   <a className="{py-2 hover:text-[#C6DA31] transition-colors ${location.pathname === link.path ? 'text-[#C6DA31] border-b-2 border-[#C6DA31]' : ''}"
-                    href={eventbriteUrl} onClick={trackEventbriteClick}>
+                    href={eventbriteUrl} onClick={trackEventbriteClick} target="_blank">
                     Register via Eventbrite
                   </a>
                 </div>

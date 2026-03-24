@@ -61,7 +61,7 @@ const Home: React.FC = () => {
                 Founded in 2011, MIC connects inventors to critical resources through education, mentorship, and a collaborative network of local, statewide, and federal partners.
               </p>
               <p>
-                In partnership with Michigan State University and the EDA University Center, MIC hosts its annual Inventors Expo and year-round opportunities that bring together innovators, service providers, and industry experts—strengthening Michigan's innovation ecosystem.
+              In partnership with MSU’s Center for Community and Economic Development, MIC hosts its annual Inventors Expo and year-round opportunities that bring together innovators, service providers, and industry experts—strengthening Michigan's innovation ecosystem.
               </p>
             </div>
           </div>

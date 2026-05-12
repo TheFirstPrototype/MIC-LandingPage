@@ -14,54 +14,115 @@ const PitchCompetition: React.FC = () => {
       </div>
 
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4">
 
-          <div className="prose prose-lg max-w-none text-gray-700 mb-16">
-            <h2 className="text-3xl font-bold text-[#112E4A]">Watch the Action</h2>
-            <p>
-              Watch the event and cheer on your favorite inventor. Join us for a competitive pitch event
-              as inventors vie for cash prizes. Be a part of the action with real-time live audience Voting.
-              Attendance for the pitch is included with every attendee ticket.
-            </p>
-          </div>
-
-          <div className="bg-gray-50 p-12 rounded-3xl border border-gray-200 mb-16 shadow-inner">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-2/3">
-                <h2 className="text-3xl font-bold text-[#112E4A] mb-4">Apply to Pitch</h2>
-                <p className="text-lg text-gray-600 mb-6">
-                  Are you an inventor who is eager to showcase your product? Apply to pitch and get a
-                  chance to win! This is your moment to gain visibility and expert validation.
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+            <div>
+              <h2 className="text-4xl font-bold text-[#112E4A] mb-6">Spin, Pitch, & Sell</h2>
+              <div className="space-y-6 text-xl text-gray-700 leading-relaxed">
+                <p>
+                  The Summit’s signature pitch competition, <span className="font-semibold text-[#112E4A]">“Spin, Pitch, & Sell,”</span> invites inventors with a minimum viable product to present live for a chance to win cash prizes and gain visibility.
                 </p>
-                <div className="mb-8">
-                  <h4 className="font-bold text-[#112E4A] uppercase tracking-wider mb-3 flex items-center gap-2">
-                    <CheckCircle className="text-green-500" size={20} /> Selection Criteria:
-                  </h4>
-                  <ul className="bg-white p-4 rounded-xl border border-gray-200">
-                    <li className="text-[#112E4A] font-semibold">Must have a minimum viable product (MVP)</li>
-                  </ul>
+                <p>
+                  Sponsored by the <span className="font-semibold text-[#112E4A]">New Economy Initiative (NEI)</span>, the competition provides winners with significant funding and expert support to accelerate their journey to market.
+                </p>
+                <div className="bg-gray-50 border-l-4 border-[#C6DA31] p-6 rounded-r-xl italic text-gray-600">
+                  "The competition will feature real-time audience voting, with winners announced during the afternoon reception."
+                  <p className="mt-2 font-bold not-italic text-[#112E4A] text-sm">— Meghan Hubbs, Pitch Chair</p>
                 </div>
-                <a
-                  href="https://startupspace.app/v2/dynamic-survey/view/305/10655"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#112E4A] text-[#C6DA31] px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform"
-                >
-                  Apply Here <Send size={20} />
-                </a>
               </div>
-              <div className="md:w-1/3">
-                <div className="bg-[#C6DA31] p-8 rounded-2xl text-center">
-                  <p className="text-[#112E4A] font-bold uppercase tracking-widest">Technical Assistance &</p>
-                  <h3 className="text-4xl font-black text-[#112E4A] mb-2">$ CASH $</h3>
-                  <p className="text-[#112E4A] font-bold uppercase tracking-widest">Prizes for Winners</p>
-                </div>
+            </div>
+
+            <div className="bg-[#112E4A] p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#C6DA31] opacity-10 -mr-16 -mt-16 rounded-full"></div>
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                <Users className="text-[#C6DA31]" />
+                Technical Assistance
+              </h3>
+              <p className="mb-8 opacity-80">Expert guidance provided by our partners:</p>
+              <div className="flex flex-wrap gap-x-4 gap-y-3">
+                {[
+                  { name: "Ward Law" },
+                  { name: "Kevin Moran" },
+                  { name: "Ash Creative" },
+                  { name: "Velocity" },
+                  { name: "Catalyst Media Factory" },
+                  { name: "Saamer Mansoor", link: "https://linkedin.com/in/saamer" },
+                  { name: "Joe Finkler" },
+                  { name: "Leah Nauseda" }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    {item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-[#C6DA31] hover:text-[#112E4A] px-4 py-1.5 rounded-full text-sm font-medium transition-all">
+                        {item.name}
+                      </a>
+                    ) : (
+                      <span className="bg-white/10 px-4 py-1.5 rounded-full text-sm font-medium">
+                        {item.name}
+                      </span>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="text-center text-gray-500 italic">
-            <p>Chair: Meghan Hubbs | Applications hosted by Velocity</p>
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-[#112E4A] mb-10 text-center">Cash Prizes & Support</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* 1st Place */}
+              <div className="bg-white p-8 rounded-3xl border-2 border-[#C6DA31] shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                <div className="absolute top-0 right-0 bg-[#C6DA31] text-[#112E4A] px-6 py-2 font-black rounded-bl-2xl uppercase text-xs tracking-tighter">Winner</div>
+                <div className="text-gray-400 font-bold uppercase text-xs mb-2">First Prize</div>
+                <h3 className="text-5xl font-black text-[#112E4A] mb-4">$3,000</h3>
+                <p className="text-gray-600 leading-relaxed font-medium">
+                  Includes complimentary technical assistance to help finalize your MVP.
+                </p>
+              </div>
+
+              {/* 2nd Place */}
+              <div className="bg-gray-50 p-8 rounded-3xl border border-gray-200 shadow-md hover:-translate-y-2 transition-all duration-300">
+                <div className="text-gray-400 font-bold uppercase text-xs mb-2">Second Prize</div>
+                <h3 className="text-4xl font-black text-[#112E4A] mb-4">$1,500</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Two months of complimentary technical assistance.
+                </p>
+              </div>
+
+              {/* 3rd Place */}
+              <div className="bg-gray-50 p-8 rounded-3xl border border-gray-200 shadow-md hover:-translate-y-2 transition-all duration-300">
+                <div className="text-gray-400 font-bold uppercase text-xs mb-2">Third Prize</div>
+                <h3 className="text-4xl font-black text-[#112E4A] mb-4">$500</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  One month of complimentary technical assistance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-[#112E4A] rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+            <div className="absolute bottom-0 left-0 w-full h-2 bg-[#C6DA31]"></div>
+            <h2 className="text-4xl font-bold mb-6">Ready to Pitch?</h2>
+            <p className="text-xl opacity-80 mb-10 max-w-2xl mx-auto">
+              Are you an inventor with an MVP? Apply now for your chance to showcase your invention to an audience of experts and investors.
+            </p>
+            <div className="flex flex-col items-center gap-6">
+              <a
+                href="https://startupspace.app/v2/dynamic-survey/view/305/10655"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 bg-[#C6DA31] text-[#112E4A] px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-lg"
+              >
+                Apply to Pitch Here <Send size={24} />
+              </a>
+              <p className="flex items-center gap-2 text-[#C6DA31] font-bold uppercase tracking-widest text-sm">
+                <CheckCircle size={18} /> Minimum Viable Product Required
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center text-gray-400 text-sm">
+            <p>Applications hosted by Velocity | Pitch Competition Chair: Meghan Hubbs</p>
           </div>
 
         </div>

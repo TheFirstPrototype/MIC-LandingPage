@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Link from './src/components/LinkWithQuery';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Heart } from 'lucide-react';
 
 // Import Pages
 import Home from './pages/Home';
@@ -168,6 +168,7 @@ const Footer = () => {
       </div>
       <div className="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-[#C6DA31]/20 text-center text-xs text-gray-400">
         &copy; {new Date().getFullYear()} Michigan Inventors Coalition. All Rights Reserved. A 501(c)(3) Nonprofit.
+        Built with <Heart className="inline-flex"></Heart> by <a href="https://thefirstprototype.com" target="_blank" className="text-[#C6DA31] hover:text-white transition-colors">TFP</a>
       </div>
     </footer>
   );

@@ -170,7 +170,7 @@ const Programming: React.FC = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#C6DA31] opacity-10 -mr-16 -mt-16 rounded-full"></div>
                 <h3 className="text-xl font-bold text-[#C6DA31] uppercase tracking-widest mb-8">Expert Panelists</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Craig Fowler", "Kevin Moran", "Dennis Shaver", "Jake Ward", "Paula Macpherson", "Joe Finkler", "Wafa Dinero"].map((name, i) => (
+                  {["Craig Fowler", "Kevin Moran", "Dennis Shaver", "Jake Ward", "Paula Macpherson", "Joe Finkler", "Wafa Dinaro", "Molly Metz"].map((name, i) => (
                     <span key={i} className="bg-white/10 px-4 py-2 rounded-xl text-sm font-medium border border-white/5 hover:bg-white/20 transition-colors">
                       {name}
                     </span>

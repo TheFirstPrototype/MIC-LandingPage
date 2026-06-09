@@ -64,14 +64,14 @@ const Summit: React.FC = () => {
             {
               "@context": "https://schema.org",
               "@type": "Event",
-              "name": "Michigan Inventors Coalition Expo 2026",
-              "startDate": "2026-07-09T08:00:00-04:00",
-              "endDate": "2026-07-09T17:00:00-04:00",
+              "name": "14th Annual Inventors Summit",
+              "startDate": "2026-07-09T09:00:00-04:00",
+              "endDate": "2026-07-09T16:00:00-04:00",
               "eventStatus": "https://schema.org/EventScheduled",
               "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
               "location": {
                 "@type": "Place",
-                "name": "Kellogg Hotel & Conference Center",
+                "name": "Kellogg Hotel and Conference Center",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "219 S Harrison Rd",
@@ -82,9 +82,14 @@ const Summit: React.FC = () => {
                 }
               },
               "image": [
-                "https://thefirstprototype.com/mic/2.png"
+                "https://thefirstprototype.com/mic/pitch.jpg"
               ],
-              "description": "The annual Michigan Inventors Coalition Expo brings together inventors, entrepreneurs, and resources from across the state for networking, education, and a pitch competition.",
+              "description": "Hosted by the Michigan Inventors Coalition, the Summit will bring together more than 300 innovators, entrepreneurs, investors and industry experts for a day of education, networking and product discovery.",
+              "offers": {
+                "@type": "Offer",
+                "url": "https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523",
+                "availability": "https://schema.org/InStock"
+              },
               "organizer": {
                 "@type": "Organization",
                 "name": "Michigan Inventors Coalition",

@@ -9,6 +9,7 @@ const Board: React.FC = () => {
     { name: "Kevin Moran", role: "Board Member", image: "https://thefirstprototype.com/mic/kevin.jpg" },
     { name: "Paula Macpherson", role: "2026 Inventors Summit Event Chair", image: "https://thefirstprototype.com/mic/paula.jpg" },
     { name: "John D. Hopkins", role: "Board Member", image: "https://thefirstprototype.com/mic/john.jpg" },
+    { name: "Q. Thang Do", role: "Board Member", image: "https://thefirstprototype.com/mic/q.jpg"} 
   ];
 
   return (

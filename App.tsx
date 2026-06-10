@@ -90,6 +90,14 @@ const Navbar = () => {
                 )}
               </div>
             ))}
+            <a 
+              href="https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#C6DA31] text-[#112E4A] font-bold py-2 px-6 rounded-full hover:bg-white hover:text-[#112E4A] transition-colors whitespace-nowrap shadow-md hover:shadow-lg"
+            >
+              REGISTER TO ATTEND
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -134,6 +142,14 @@ const Navbar = () => {
               )}
             </div>
           ))}
+          <a
+            href="https://www.eventbrite.com/e/michigan-inventors-coalition-2026-inventors-summit-tickets-1983324016523"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block mt-6 text-center bg-[#C6DA31] text-[#112E4A] font-bold py-3 px-4 rounded-full hover:bg-white transition-colors shadow-md"
+          >
+            REGISTER TO ATTEND
+          </a>
         </div>
       </div>
     </nav>

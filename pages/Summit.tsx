@@ -82,7 +82,7 @@ const Summit: React.FC = () => {
                 }
               },
               "image": [
-                "https://thefirstprototype.com/mic/pitch.jpg"
+                "https://thefirstprototype.com/mic/pitch-2.jpg"
               ],
               "description": "Hosted by the Michigan Inventors Coalition, the Summit will bring together more than 300 innovators, entrepreneurs, investors and industry experts for a day of education, networking and product discovery.",
               "offers": {
@@ -100,7 +100,7 @@ const Summit: React.FC = () => {
         }}
       />
       <div className="bg-[#112E4A] py-20 text-white text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://thefirstprototype.com/mic/pitch.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://thefirstprototype.com/mic/pitch-2.jpg')] bg-cover bg-center opacity-20" />
         <div className="relative z-10 max-w-5xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[#C6DA31]">2026 Inventors Summit</h1>
           <div className="flex flex-wrap justify-center gap-8 text-xl font-medium">

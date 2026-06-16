@@ -81,8 +81,8 @@ const Programming: React.FC = () => {
             <div className="grid gap-4 mb-12">
               {[
                 { name: "Barbara Kent and Joanna Serra", desc: "Founders of Fundraiser Blankets® (as seen on Shark Tank)" },
-                { name: "Special Guest from USPTO", desc: "Get your questions answered from the US Patent and Trademark Office" },
-                { name: "Dr. Brooks", desc: "Michigan State University leader in economic development and innovation" },
+                { name: "Marilyn C. Nash, Regional Outreach Officer at USPTO", desc: "Get your questions answered from the US Patent and Trademark Office" },
+                { name: "David Fedewa", desc: "Learn all about how to license your invention for royalties" },
                 { name: "Christopher Kaminsky", desc: "Grand River Makerspace, supporting inventors with prototyping and fabrication tools" },
                 { name: "Steve Cantin", desc: "30+ years in pet industry; Sells to Petco, PetSmart, Chewy, and Pet Supply Plus." },
                 { name: "Craig Fowler", desc: "Entrepreneur and angel investor" },
@@ -136,8 +136,7 @@ const Programming: React.FC = () => {
                   <div className="space-y-3">
                     {[
                       { name: "Leah Nauseada", topic: "Networking w/ Intention" },
-                      { name: "Pete Brown", topic: "Ash Interactive" },
-                      { name: "Jennifer Foster", topic: "Catalyst Media Factory" }
+                      { name: "Pete Brown", topic: "Ash Interactive" }
                     ].map((s, i) => (
                       <div key={i} className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center gap-3">
                         <span className="font-bold text-[#112E4A] whitespace-nowrap">{s.name}</span>

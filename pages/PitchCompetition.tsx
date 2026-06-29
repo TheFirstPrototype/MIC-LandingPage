@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Trophy, Send, Users, CheckCircle } from 'lucide-react';
+import { Trophy, Users, CheckCircle } from 'lucide-react';
 
 const PitchCompetition: React.FC = () => {
   return (
@@ -102,21 +102,17 @@ const PitchCompetition: React.FC = () => {
 
           <div className="bg-[#112E4A] rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
             <div className="absolute bottom-0 left-0 w-full h-2 bg-[#C6DA31]"></div>
-            <h2 className="text-4xl font-bold mb-6">Ready to Pitch?</h2>
-            <p className="text-xl opacity-80 mb-10 max-w-2xl mx-auto">
-              Are you an inventor with an MVP? Apply now for your chance to showcase your invention to an audience of experts and investors.
+            <h2 className="text-4xl font-bold mb-6">Applications are Closed</h2>
+            <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
+              Thank you to everyone who submitted their application! Pitch competition applications are now closed.
+              Please watch this page closely as we will be announcing the teams that made it to the finals soon.
             </p>
             <div className="flex flex-col items-center gap-6">
-              <a
-                href="https://startupspace.app/v2/dynamic-survey/view/305/10655"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-3 bg-[#C6DA31] text-[#112E4A] px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-lg"
-              >
-                Apply to Pitch Here <Send size={24} />
-              </a>
+              <div className="inline-flex items-center gap-3 bg-white/10 text-white/50 border border-white/20 px-10 py-5 rounded-2xl font-bold text-xl cursor-not-allowed">
+                Applications Closed
+              </div>
               <p className="flex items-center gap-2 text-[#C6DA31] font-bold uppercase tracking-widest text-sm">
-                <CheckCircle size={18} /> Minimum Viable Product Required
+                <CheckCircle size={18} /> Finalists Will Be Announced Here
               </p>
             </div>
           </div>
